@@ -421,7 +421,7 @@ def ec_add_point(x1, y1, x2, y2, n)
   lambda = ((y2 - y1) * invmod(x2 - x1, n)) % n
   nu = (y2 - lambda * x2) % n
   mu = (y1 - lambda * x1) % n
-  raise "This is totally bad" unless nu == mu
+  fail 'This is totally bad' unless nu == mu
   x = (lambda ** 2 - x1 - x2) % n
   y = - (lambda *  + nu) % n
   y = (lambda * (x1 - x) - y1) % n
@@ -523,3 +523,5 @@ def hw11_3()
   print "\n"
   print ec_multiply_point(15, 6, 23, 1, 3)
 end
+
+hw11_3()

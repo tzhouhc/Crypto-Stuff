@@ -208,9 +208,40 @@ class Polynomial
 
 end
 
-a = Polynomial.new([1,0,0,0,1,1,0,1,1], 2)
-b = Polynomial.new([1,1,1,1,1], 2)
-puts a / b
-puts a % b
 
-puts (a / b) * b + a % b
+# a = Polynomial.new([1,1,0,1,1,0,1,1], 2) # y to zero
+# b = Polynomial.new([0,0,0,1,0,0,1,1], 2)
+# c = Polynomial.new([0,1,0,1,0,0,1,1], 2)
+# d = Polynomial.new([0,1,0,0,0,1,0,1], 2) # y to 3
+# first = [a, b, c, d]
+
+# e = Polynomial.new([0,0,0,0,0,0,1,0], 2) # y to zero
+# f = Polynomial.new([0,0,0,0,0,0,0,1], 2)
+# g = Polynomial.new([0,0,0,0,0,0,0,1], 2)
+# h = Polynomial.new([0,0,0,0,0,0,1,1], 2) # y to 3
+# second = [e, f, g, h]
+
+# r = Polynomial.new([1,0,0,0,1,1,0,1,1], 2)
+
+
+# total = Hash.new(Polynomial.new([0], 2))
+# for n in (0..3)
+#   for m in (0..3)
+#     cur = ((first[n] * second[m]) % r)
+#     print "#{first[n]}, #{second[m]}, #{cur}\n"
+#     total[(m+n)%4] += cur
+#   end
+# end
+
+# puts ""
+# for i in (0..3)
+#   puts "(" + total[3-i].to_s + ")y^#{3-i}"
+# end
+
+# puts "\n"
+
+# puts (d * 2 + c + b + a * 3)
+# puts (d * 3 + c * 2 + b + a)
+# puts (d + c * 3 + b * 2 + a)
+# puts (d + c + b * 3 + a * 2)
+
